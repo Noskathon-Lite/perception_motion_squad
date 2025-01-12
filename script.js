@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cartTotal = 0;
 
-    // Handle applying promo code for each product
     promoButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const productContainer = button.parentElement;
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 promoMessage.textContent = "Promo code applied! 25% discount applied.";
                 promoMessage.style.color = "green";
 
-                // Update button price for cart addition
                 button.setAttribute("data-price", discountedPrice.toFixed(2));
                 promoCodeInput.disabled = true;
                 button.disabled = true;
@@ -33,18 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Handle adding items to cart
     cartButtons.forEach((button) => {
         button.addEventListener("click", () => {
             const price = parseFloat(button.getAttribute("data-price"));
             cartTotal += price;
 
-            // Update cart total
             updateCartTotal();
         });
     });
 
-    // Update cart total display
     function updateCartTotal() {
         cartTotalElement.textContent = `NPR ${cartTotal.toFixed(2)}`;
     }
