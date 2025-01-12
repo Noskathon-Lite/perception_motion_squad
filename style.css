@@ -1,3 +1,68 @@
-body{
-    bod
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_page {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #2575fc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+form button:hover {
+    background: #6a11cb;
+}
+
+.signin {
+    margin-top: 15px;
+}
+
+.signin a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.signin a:hover {
+    color: #ffdd57;
 }
