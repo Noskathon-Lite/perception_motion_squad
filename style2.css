@@ -1,13 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
     padding: 0;
     box-sizing: border-box;
 }
 .logo
 {
     display: flex;
-   background-color: #4CAF50;
+   background-color: #9fbafd;
 }
 .nav-links
 {
@@ -15,3 +15,5 @@ body {
     width: 100%;
     justify-content: space-around;
 }
+
+
