@@ -1,0 +1,119 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #23a745;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.8;
+    color: #f8f9fa;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #6a11cb; 
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    background-color: #ff6f91;
+    transform: scale(1.1);
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(120deg, #f093fb, #f5576c);
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.sections-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section {
+    flex: 1 1 300px;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.section h1 {
+    text-align: center;
+    margin-bottom: 15px
+}
+#ContactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}

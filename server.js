@@ -8,7 +8,6 @@ app.post('/login', (req, res) => {
         return res.send('<h3>Invalid credentials. User not found.</h3>');
     }
 
-    // Compare the entered password with the hashed password in the database
     bcrypt.compare(password, user.password, (err, isMatch) => {
         if (err) {
             return res.status(500).send('<h3>Internal server error.</h3>');
