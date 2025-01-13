@@ -1,0 +1,186 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Product Grid Layout */
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid with dynamic columns */
+    gap: 30px; /* Adds space between grid items */
+    justify-items: center;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Equal Size for Product Cards */
+.products {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 450px; /* Set fixed height to maintain equal size */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+}
+
+.products:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.products img {
+    width: 100%;
+    height: 180px; /* Set fixed height for images to maintain uniformity */
+    object-fit: cover; /* Ensures images fit nicely within the card */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.products img:hover {
+    transform: scale(1.05);
+}
+
+h3, h4, h5 {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 500;
+    margin-top: 10px;
+    height: 60px; /* Ensure heading text takes up equal height in each card */
+    overflow: hidden; /* Hide overflow if text is too long */
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745;
+    border: none;
+    padding: 12px 20px; /* Set fixed padding to maintain consistent size */
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Ensure space between button and other content */
+    height: 45px; /* Set fixed height for uniform button size */
+    width: 100%; /* Ensure the button occupies full width of the card */
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Input and Promo Code Styles */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Promo Message */
+.promo-message {
+    font-size: 1rem;
+    color: #28a745;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* Section Style */
+section {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 20px;
+    padding: 50px 0;
+}
+
+/* Flexbox Layout Fix for Button Positioning */
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure button stays at the bottom */
+    height: 450px; /* Set a fixed height */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #products {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Columns adjust for tablets */
+    }
+
+    .products {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    #products {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Columns adjust for smaller screens */
+    }
+
+    .products {
+        width: 100%;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #products {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .products {
+        width: 100%;
+        max-width: 350px;
+    }
+}
