@@ -6,7 +6,7 @@ document.querySelectorAll('.apply-promo-item').forEach(button => {
         const promoCode = inputField.value.trim().toUpperCase();
         
         if (promoCode === 'NOSK25') {
-            const discount = 0.25; // 25% discount
+            const discount = 0.25; 
             const discountedPrice = originalPrice - (originalPrice * discount);
             promoMessage.textContent = `Promo applied! Your discounted price is NPR ${discountedPrice.toFixed(2)}`;
             promoMessage.style.color = 'green';

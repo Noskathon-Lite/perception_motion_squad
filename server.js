@@ -1,7 +1,6 @@
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    // Find user in the mock database
     const user = users.find(u => u.username === username);
     
     if (!user) {
